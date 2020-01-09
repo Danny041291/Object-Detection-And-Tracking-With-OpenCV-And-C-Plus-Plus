@@ -19,7 +19,7 @@ int main()
 	TrackerFactory trackerFactory(static_cast<TrackerType>(2));
 	auto tracker = trackerFactory.GetTracker();
 
-	// Open the camera
+	// Activate the camera
 	VideoCapture camera(0);
 	if (!camera.isOpened())
 		return 1;
@@ -27,6 +27,7 @@ int main()
 	Mat frame;
 	Rect2d bbox(250, 100, 200, 225);
 	bool photo = false;
+	bool init = false;
 
 	// Frame loop
 	while (camera.read(frame))
@@ -40,7 +41,11 @@ int main()
 		else 
 		{
 			// Init the tracker with the object to recognize
-			tracker->init(frame, bbox);
+			if (!init) 
+			{
+				tracker->init(frame, bbox);
+				init = true;
+			}
 
 			// Track the object
 			if (tracker->update(frame, bbox))
