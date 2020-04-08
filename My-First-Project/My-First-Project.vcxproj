@@ -20,9 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{4BF276B2-2F08-421B-8BC9-51162BFA9E2B}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ObjectTrackingOpenCV</RootNamespace>
+    <ProjectGuid>{1EEFA9E5-7B51-424E-A754-C07476140341}</ProjectGuid>
+    <RootNamespace>MyFirstProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -84,12 +83,9 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -99,32 +95,23 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\opencv-4.1.2\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\opencv-4.1.2\build\install\x64\vc16\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -136,10 +123,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
@@ -153,16 +137,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\opencv-4.1.2\build\install\x64\vc16\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opencv_aruco412.lib;opencv_bgsegm412.lib;opencv_bioinspired412.lib;opencv_calib3d412.lib;opencv_ccalib412.lib;opencv_core412.lib;opencv_datasets412.lib;opencv_dnn412.lib;opencv_dnn_objdetect412.lib;opencv_dnn_superres412.lib;opencv_dpm412.lib;opencv_face412.lib;opencv_features2d412.lib;opencv_flann412.lib;opencv_fuzzy412.lib;opencv_gapi412.lib;opencv_hfs412.lib;opencv_highgui412.lib;opencv_img_hash412.lib;opencv_imgcodecs412.lib;opencv_imgproc412.lib;opencv_line_descriptor412.lib;opencv_ml412.lib;opencv_objdetect412.lib;opencv_optflow412.lib;opencv_phase_unwrapping412.lib;opencv_photo412.lib;opencv_plot412.lib;opencv_quality412.lib;opencv_reg412.lib;opencv_rgbd412.lib;opencv_saliency412.lib;opencv_shape412.lib;opencv_stereo412.lib;opencv_stitching412.lib;opencv_structured_light412.lib;opencv_superres412.lib;opencv_surface_matching412.lib;opencv_text412.lib;opencv_tracking412.lib;opencv_video412.lib;opencv_videoio412.lib;opencv_videostab412.lib;opencv_xfeatures2d412.lib;opencv_ximgproc412.lib;opencv_xobjdetect412.lib;opencv_xphoto412.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_aruco412.lib;opencv_bgsegm412.lib;opencv_bioinspired412.lib;opencv_calib3d412.lib;opencv_ccalib412.lib;opencv_core412.lib;opencv_datasets412.lib;opencv_dnn412.lib;opencv_dnn_objdetect412.lib;opencv_dnn_superres412.lib;opencv_dpm412.lib;opencv_face412.lib;opencv_features2d412.lib;opencv_flann412.lib;opencv_fuzzy412.lib;opencv_gapi412.lib;opencv_hfs412.lib;opencv_highgui412.lib;opencv_imgcodecs412.lib;opencv_imgproc412.lib;opencv_img_hash412.lib;opencv_line_descriptor412.lib;opencv_ml412.lib;opencv_objdetect412.lib;opencv_optflow412.lib;opencv_phase_unwrapping412.lib;opencv_photo412.lib;opencv_plot412.lib;opencv_quality412.lib;opencv_reg412.lib;opencv_rgbd412.lib;opencv_saliency412.lib;opencv_shape412.lib;opencv_stereo412.lib;opencv_stitching412.lib;opencv_structured_light412.lib;opencv_superres412.lib;opencv_surface_matching412.lib;opencv_text412.lib;opencv_tracking412.lib;opencv_video412.lib;opencv_videoio412.lib;opencv_videostab412.lib;opencv_xfeatures2d412.lib;opencv_ximgproc412.lib;opencv_xobjdetect412.lib;opencv_xphoto412.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Object-Tracking-OpenCV.cpp" />
-    <ClCompile Include="tracker-factory.cpp" />
+    <ClInclude Include="TrackerFactory.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="enums.h" />
-    <ClInclude Include="tracker-factory.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TrackerFactory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
